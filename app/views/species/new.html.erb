@@ -1,0 +1,11 @@
+<h1>New Species</h1>
+
+<form action="/species" method="post">
+  <label for="species_name">Species</label>
+  <input id="species_name" name="new_species[name]" type="text" value="<%= @species.name %>">
+  <label for="species_kind">Kind</label>
+  <input id="species_kind" name="new_species[kind]" type="text" value="<%= @species.kind%>">
+  <button>Add New Species</button>
+</form>
+
+<p><a href="/species">Return to species listing.</a></p>
