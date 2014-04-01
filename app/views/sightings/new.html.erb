@@ -1,0 +1,22 @@
+<h1>New Sighting</h1>
+
+<form action="/sightings" method="post">
+  <label for="sighting_location">Location</label>
+  <input id="sighting_location" name="new_sighting[location]" type="text" value="<%= @sighting.location %>">
+
+  <label for="sighting_date">Date (m/dd/yyyy)</label>
+  <input id="sighting_date" name="new_sighting[date]" type="text" value="<%= @sighting.date%>">
+
+  <label for="sighting_time">Time(hh:mm AM/PM)</label>
+  <input id="sighting_time" name="new_sighting[time]" type="text" value="<%= @sighting.time%>">
+
+  <select name="new_sighting[species_id]">
+    <% Species.all.each do |species| %>
+    <option value="<%= species.id %>"> <%= species.name %> </option>
+    <% end %>
+  </select>
+
+  <button>Add new sighting</button>
+</form>
+
+<p><a href="/">Return to list of sightings.</a></p>

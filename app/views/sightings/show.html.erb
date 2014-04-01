@@ -1,0 +1,10 @@
+<h1>SHOW PAGE</h1>
+
+<p>Location: <%= @sighting.location %></p>
+<p>Date: <%= @sighting.date %></p>
+<p>Time: <%= @sighting.time %></p>
+<p>Species: <%= @sighting.species.name %></p>
+<p>Kind: <%= @sighting.species.kind %></p>
+
+<p><a href="/sightings/<%= @sighting.id %>/edit">Edit sighting</a></p>
+<p><a href="/">Return to list of sightings</a></p>

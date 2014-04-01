@@ -1,0 +1,10 @@
+<h1>List of Sightings in the Portland Area</h1>
+
+<ul>
+  <% @sightings.each do |sighting| %>
+  <li><a href="/sightings/<%= sighting.id %>">Location: <%= sighting.location %> --- Date: <%= sighting.date %> --- Time: <%= sighting.time %></a></li>
+  <% end %>
+</ul>
+
+
+<button><a href="/sightings/new">Add a new sighting!!!</a></button>
