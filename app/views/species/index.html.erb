@@ -1,11 +1,11 @@
 <h1>List of Species Sighted in the Portland Area</h1>
 
 <ul>
-  <% @species.each do |species| %>
-  <li>Species: <%= species.name %> --- Kind: <%= species.kind %> </li>
+  <% @species.each do |s| %>
+  <li><a href="/species/<%= s.id %>">Species: <%= s.name %> --- Kind: <%= s.kind %> </a></li>
   <% end %>
 </ul>
 
 
 
-<p><a href="/species/new">Add a New Species!!!</a></p>
+<button><a href="/species/new">Add a New Species!!!</a></button>

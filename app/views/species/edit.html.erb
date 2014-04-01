@@ -1,0 +1,26 @@
+<h1>Edit Species</h1>
+
+<% if @species.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @species.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/species/<%= @species.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="species_name">Species</label>
+  <input id="species_name" name="updated_species[name]" type="text" value="<%= @species.name %>">
+  <label for="species_kind">Kind</label>
+  <input id="species_kind" name="updated_species[kind]" type="text" value="<%= @species.kind%>">
+  <button>Update Species</button>
+</form>
+
+<p><a href="/species/<%= @species.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+
+<p><a href="/species">Return to species listing.</a></p>
