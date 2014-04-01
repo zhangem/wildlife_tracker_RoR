@@ -1,4 +1,4 @@
-class SpeciesController < ApplicationController
+ class SpeciesController < ApplicationController
 
   def index
     @species = Species.all

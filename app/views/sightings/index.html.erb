@@ -2,7 +2,7 @@
 
 <ul>
   <% @sightings.each do |sighting| %>
-  <li><a href="/sightings/<%= sighting.id %>">Location: <%= sighting.location %> --- Date: <%= sighting.date %> </a></li>
+  <li><a href="/sightings/<%= sighting.id %>">Location: <%= sighting.location %> --- Date: <%= sighting.date %> --- Time: <%= sighting.time %></a></li>
   <% end %>
 </ul>
 

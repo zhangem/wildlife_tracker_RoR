@@ -5,10 +5,10 @@
   <input id="sighting_location" name="new_sighting[location]" type="text" value="<%= @sighting.location %>">
 
   <label for="sighting_date">Date (m/dd/yyyy)</label>
-  <input id="sighting_date" name="new_sighting[date]" type="text" value="<%= @sighting.date%>">
+  <input id="sighting_date" name="new_sighting[date]" type="text" value="<%= Date.today %>">
 
   <label for="sighting_time">Time(hh:mm AM/PM)</label>
-  <input id="sighting_time" name="new_sighting[time]" type="text" value="<%= @sighting.time%>">
+  <input id="sighting_time" name="new_sighting[time]" type="text" value="<%= Time.now.strftime "%H:%M" %>">
 
   <select name="new_sighting[species_id]">
     <% Species.all.each do |species| %>
